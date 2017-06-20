@@ -1,0 +1,32 @@
+.mainContainer {
+    background-color: #cce6ff;
+    border: 3px solid black;
+    padding: 1%;
+    margin: 0 auto;
+    width: 215px;
+}
+
+.bigButton button {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.biggerButtons {
+    width: 105px !important;
+}
+
+.operator {
+    background-color: #ffe8cc;
+}
+
+.operations {
+    background-color: #ffd6cc;
+}
+
+#newResult {
+    border: 3px solid black;
+    width:100%;
+    height: 100%;
+    font-size: 64px;
+}
