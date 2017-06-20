@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles.css">
         <title>Calculator</title>
     </head>
-    <body>
+    <body id="grad">
     <div>
     <textarea id="newResult"></textarea> </div>
         <div class="mainContainer">
