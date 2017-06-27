@@ -1,9 +1,14 @@
-.mainContainer {
+.container-fluid {
     background-color: #cce6ff;
     border: 3px solid black;
-    padding: 1%;
-    margin: 0 auto;
-    width: 215px;
+    margin: 10% auto;
+    width: 240px;
+    padding: 10px;
+}
+
+.form-control {
+  font-size: 25px;
+  border: 2px solid black;
 }
 
 .bigButton button {
@@ -22,14 +27,6 @@
 
 .operations {
     background-color: #ffd6cc;
-}
-
-#newResult {
-    border: 3px solid black;
-    width: 25%;
-    height: 100%;
-    font-size: 64px;
-    margin: 0 36%;
 }
 
 #grad {
