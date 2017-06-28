@@ -1,0 +1,21 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "A simple calculator ",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass -rw scss/scss -o assets/css",
+    "watch": "npm run scss-compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnPark86/CalculatorJS.git"
+  },
+  "author": "John Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnPark86/CalculatorJS/issues"
+  },
+  "homepage": "https://github.com/JohnPark86/CalculatorJS#readme"
+}
