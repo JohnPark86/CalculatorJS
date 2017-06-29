@@ -67,7 +67,7 @@
 /* 0 */
 /***/ (function(module, exports) {
 
-throw new Error("Module parse failed: /Users/admin/Desktop/Coding stuff/calc/assets/js/functions.js Unexpected token (4:6)\nYou may need an appropriate loader to handle this file type.\n| \r\n| module.functions = {\r\n|     $(function(){\r\n|         var operations =[];\r\n| \r");
+throw new Error("Module parse failed: /Users/admin/Desktop/Coding stuff/calc/assets/js/functions.js 'var' can not be used as shorthand property (6:8)\nYou may need an appropriate loader to handle this file type.\n| module.functions = {\r\n|    \r\n|         var operations =[];\r\n| \r\n|         $('[data-num]').on('click', function () {\r");
 
 /***/ })
 /******/ ]);
