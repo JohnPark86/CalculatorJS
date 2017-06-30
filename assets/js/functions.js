@@ -1,60 +1,40 @@
-var $ = require('jquery');
-window.$ = jQuery;
+import $ from 'jquery';
 
-module.functions = {
-    $(function(){
-        var operations =[];
+var operations = [];
 
-        $('[data-num]').on('click', function () {
-            var $btn = $(this),
-                numValue = parseInt($btn.attr('data-num'), 10);
-                operations.push(numValue);
-                updateDisplay();
-        });
+export function addOperation(op) {
+    operations.push(op);
+}
 
-        $('[data-operation]').on('click', function () {
-            var $btn = $(this),
-                operationType = $btn.attr('data-operation');
-                operations.push(operationType);
-                updateDisplay();
-        });
+export function getOperations() {
+    return operations;
+}
 
-        $("#clear").click(function(){
-            operations = [];
-            clearDisplay();
-        });
+export function updateDisplay(){
+    var exp = "";
+    for (var i = 0; i < operations.length; i++) {
+        exp += operations[i];
+    }
+    $('#newResult').val(exp);
+}
 
-        $("#equals").click(function(){
-            var exp = "";
-            for (var i = 0; i < operations.length; i++) {
-                exp += operations[i];
-            }
-            evaluate(exp);
-        });
+export function updateDisplayWithResult(res){
+    $('#newResult').val(res);
+}
 
-        function updateDisplay(){
-             var exp = "";
-            for (var i = 0; i < operations.length; i++) {
-                exp += operations[i];
-            }
-            $('#newResult').val(exp);
-        }
+export function evaluate(exp){
+    clearDisplay();
+    var res = eval(exp);
+    operations.push(res);
+    updateDisplayWithResult(res);
+    emptyOperations();
+}
 
-        function updateDisplayWithResult(res){
-            $('#newResult').val(res);
-        }
+function emptyOperations() {
+    operations = [];
+}
 
-        function evaluate(exp){
-            clearDisplay();
-            operations = [];
-            var res = eval(exp);
-            operations.push(res);
-            updateDisplayWithResult(res);
-        }
-
-        function clearDisplay(){
-            operations = [];
-            $('#newResult').val('');
-        }
-    });
+export function clearDisplay(){
+    emptyOperations();
+    $('#newResult').val('');
 }

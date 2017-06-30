@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npm run scss-compile",
     "scss-compile": "node-sass -rw scss/scss -o assets/css",
-    "watch": "npm run scss-compile"
+    "watch": "npm run scss-compile",
+    "build-js": "webpack --config ./webpack.config.js --verbose"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,7 @@
     "url": "https://github.com/JohnPark86/CalculatorJS/issues"
   },
   "homepage": "https://github.com/JohnPark86/CalculatorJS#readme",
-  "dependencies": {
-    "jquery": "^3.2.1",
+  "devDependencies": {
     "webpack": "^3.0.0"
   }
 }

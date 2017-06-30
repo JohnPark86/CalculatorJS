@@ -1,20 +1,16 @@
-var webpack = require('webpack');
+'use strict';
+
+const path = require('path');
 
 module.exports = {
-    entry: "./assets/js/functions.js",
+    entry: path.resolve(__dirname, "assets", "js", "app"),
     output: {
-        path: __dirname,
+        path: path.resolve(__dirname,'assets','js'),
         filename: "bundle.js"
-    },
-    module: {
-        loaders: [
-            { test: /\.css$/, loader: "style!css" }
-        ]
-    },
-    plugins: [
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        })
-    ]
+    }//,
+    // module: {
+    //     loaders: [
+    //         { test: /\.css$/, loader: "style!css" }
+    //     ]
+    // }
 };
